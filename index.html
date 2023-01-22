@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doggo Rater</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Doggo Rater</h1>
+
+
+    <p class="dog-text">
+      Want to only select cute dogs? Type your breed here.
+    </p>
+
+    <div class="breed-btn">
+      <input type="text" class="breed-text" onchange="getText()"  id="input-get" placeholder="Husky..">
+    </div>
+
+    <centre>
+      <img class="bubble" src="pics/speech-bubble-png.png" width="400px" >
+      <figcaption id="msg" class ="dog-msg"></figcaption>
+      <img class="animal-pic" id="existing-dog-image" src="" alt="Random Dog Image" width="400px" height="400px">   
+    </centre>
+
+    <!-- UPDATE STARS -->
+    <form id="rating-form">
+        <div class="star-rating">
+          <input type="radio" id="star1" name="rating" value="1" /><label for="star1" class="fa fa-star"></label>
+          <input type="radio" id="star2" name="rating" value="2" /><label for="star2" class="fa fa-star"></label>
+          <input type="radio" id="star3" name="rating" value="3" /><label for="star3" class="fa fa-star"></label>
+          <input type="radio" id="star4" name="rating" value="4" /><label for="star4" class="fa fa-star"></label>
+          <input type="radio" id="star5" name="rating" value="5" /><label for="star5" class="fa fa-star"></label>
+        </div>
+        <input class="submit_btn" type="submit" value="Submit Rating">
+    </form>
+      
+    <div class="btns">
+      <button onclick="bubbleSort()" class="btn" type="button">Assending Sort</button>
+      <button onclick="desendingSort()" class="btn" type="button">Desending Sort</button> 
+    </div>
+
+      <table id="rating-table" class="rated_pics">
+        <thead>
+          <tr>
+            <th>Rating</th>
+            <th>Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- This will be populated with the ratings and images -->
+        </tbody>
+      </table>
+
+    <div id="rating-list" class="rating-list">
+        <ul>
+          <!-- This will be populated with the ratings and images -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+
+      
+</body>
+</html>
